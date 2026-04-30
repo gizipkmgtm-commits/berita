@@ -2,42 +2,143 @@
 
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Thumbnail Multi Link</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #111;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .thumbnail {
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .thumbnail img {
-      width: 300px;
-      border-radius: 15px;
-    }
-    .thumbnail:hover {
-      transform: scale(1.05);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahasia Ikan Cupang Terbongkar</title>
+
+<!-- 🔥 Open Graph (WAJIB biar muncul di Facebook) -->
+
+<meta property="og:title" content="🔥 90% Orang Salah Rawat Ikan Cupang!">
+<meta property="og:description" content="Cara simpel bikin ikan sehat & warna makin cerah. Klik sekarang!">
+<meta property="og:image" content="https://gizipkmgtm-commits.github.io/berita/thumbnail.jpg">
+<meta property="og:url" content="https://gizipkmgtm-commits.github.io/berita/">
+<meta property="og:type" content="website">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #020617, #0f172a);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Thumbnail */
+.thumbnail img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Headline */
+h1 {
+  font-size: 26px;
+  margin-top: 15px;
+  color: #facc15;
+}
+
+/* Subtext */
+p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* CTA */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* urgency */
+.urgent {
+  margin-top: 15px;
+  color: #f87171;
+  font-size: 14px;
+}
+
+/* fake notif */
+.notif {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #111827;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  display: none;
+}
+</style>
+
 </head>
+
 <body>
 
-<div class="thumbnail" onclick="openLinks()">
-  <img src="https://bogor.voa.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-14.48.38-1068x1298.jpeg" alt="Thumbnail">
+<div class="container">
+
+  <!-- Thumbnail -->
+
+  <div class="thumbnail" onclick="openLinks()">
+    <img src="thumbnail.jpg" alt="Thumbnail">
+  </div>
+
+  <!-- Judul -->
+
+  <h1>🔥 90% ORANG SALAH RAWAT CUPANG!</h1>
+
+  <!-- Deskripsi -->
+
+  <p>Rahasia bikin ikan lebih sehat, aktif & warna makin cerah dalam hitungan hari</p>
+
+  <!-- Tombol -->
+
+<a href="#" class="btn" onclick="openLinks()">👉 LIHAT SEKARANG</a>
+
+  <!-- Urgency -->
+
+  <div class="urgent">⚠️ Promo terbatas, banyak yang sudah beli hari ini!</div>
+
+</div>
+
+<!-- Notifikasi fake -->
+
+<div class="notif" id="notifBox">
+  🔥 Seseorang baru saja membeli produk ini
 </div>
 
 <script>
+// buka 2 link (anti block)
 function openLinks() {
   window.open("https://s.shopee.co.id/1qYVOMZdUc", "_blank");
-  window.open("https://bogor.voa.co.id/berita/3257/publik-desak-polisi-tindak-oknum-wartawan-yang-viral-di-instagram-polres-bogor-diminta-periksa-dan-tes-urine/", "_blank");
+  setTimeout(() => {
+    window.location.href = "https://bogor.voa.co.id/berita/3257/";
+  }, 800);
 }
+
+// fake notif muncul random
+setInterval(() => {
+  const notif = document.getElementById("notifBox");
+  notif.style.display = "block";
+  setTimeout(() => {
+    notif.style.display = "none";
+  }, 3000);
+}, 8000);
 </script>
 
 </body>
