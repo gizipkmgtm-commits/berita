@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Thumbnail Multi Link</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .thumbnail {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .thumbnail img {
+      width: 300px;
+      border-radius: 15px;
+    }
+    .thumbnail:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="thumbnail" onclick="openLinks()">
+  <img src="https://bogor.voa.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-14.48.38-1068x1298.jpeg" alt="Thumbnail">
+</div>
+
+<script>
+function openLinks() {
+  window.open("https://s.shopee.co.id/1qYVOMZdUc", "_blank");
+  window.open("https://bogor.voa.co.id/berita/3257/publik-desak-polisi-tindak-oknum-wartawan-yang-viral-di-instagram-polres-bogor-diminta-periksa-dan-tes-urine/", "_blank");
+}
+</script>
+
+</body>
+</html>
